@@ -2,12 +2,12 @@
 ## spring-2022-work
 
 
-### Last Name:  
-### First Name: 
-### GitHub Username: 
+### Last Name: Fareed
+### First Name: Shahzaib
+### GitHub Username: Shahzaibf123
 
 ---
-#### General Workflow: 
+#### General Workflow:
 * Fill out the top of this form, commit and push it back to GitHub.
 * For each assignment,
   * `$ mkdir <assignment-number>-<topic>` (to be specified for each assignment)
@@ -17,4 +17,3 @@
 
 #### General Grading Rubric:
 ![rubric](rubric.png)
-
