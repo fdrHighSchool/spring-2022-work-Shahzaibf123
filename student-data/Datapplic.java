@@ -11,15 +11,36 @@ public class Datapplic {
       Student student1 = new Student("1234567","Jimmy Smith", true, grades1);
       Student student2 = new Student("98764543","Maria Hernandez",false, new int[] {95,100,100,90,90});
       System.out.println(student1.getName() + "'s average is: " + student1.getAverage());
-
+      if (student1.isFailing()) {
+        System.out.println("You're failing! Work harder! :(");
+      }
+      else {
+        System.out.println("You're passing all your classes! Congrats! :)");
+      }
       if (student1.getCloseContact()){
         System.out.println("Please report to the auditorium for your take-home covid test.");
       }
       else {
         System.out.println("You are not a close contact, keep masking! Get boosted.");
       }
-      System.out.println(student2.getName() + "'s average is: " + student2.getAverage());
 
+      //********** Student 2:
+
+
+      System.out.println(student2.getName() + "'s average is: " + student2.getAverage());
+      if (student2.isFailing()) {
+        System.out.println("");
+        System.out.println("You're failing! Work harder! :(");
+      }
+      else {
+        System.out.println("You're passing all your classes! Congrats! :)");
+      }
+      if (student2.getCloseContact()){
+        System.out.println("Please report to the auditorium for your take-home covid test.");
+      }
+      else {
+        System.out.println("You are not a close contact, keep masking! Get boosted.");
+      }
 
   }
 }

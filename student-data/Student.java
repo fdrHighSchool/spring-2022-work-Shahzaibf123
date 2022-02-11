@@ -43,6 +43,12 @@ public class Student {
 
   //see if the student is failing
   public boolean isFailing() {
-    return true;
+    for (int grade : grades) {
+      if (grade < 65) {
+        return true;
+      }
+    }
+    return false;
   }
+  
 }
