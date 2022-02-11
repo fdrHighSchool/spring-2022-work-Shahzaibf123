@@ -6,19 +6,29 @@ public class Student {
   private int[] grades;
 
   //constructor method
-  public Student(String id, String n, boolean cc, integer g) {
+  public Student(String id, String n, Boolean cc, int[] g) {
     this.id = id;
     this.name = n;
-    this.cc = cc;
+    this.closeContact = cc;
     this.grades = g;
   }
 
 
   //behaviors (methods)
 
+  public double getAverage() {
+    int total = 0;
+    for (int grade : grades) {
+      total += grade;
+    }
+    return total / grades.length;
+  }
+
+
+
   //get closecontact status of student
   public boolean getCloseContact() {
-
+    return this.closeContact;
   }
 
   //set the value of close contact
@@ -28,11 +38,11 @@ public class Student {
 
   //get the String value of the object
   public String getName() {
-
+    return this.name;
   }
 
   //see if the student is failing
   public boolean isFailing() {
-
+    return true;
   }
 }

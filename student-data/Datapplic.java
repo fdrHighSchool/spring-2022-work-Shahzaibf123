@@ -6,17 +6,19 @@ public class Datapplic {
     String[] name = {"Jimmy Smith", "Mara Hernandez", "Jamal Jenkins", "Rana Ah", "Michael Go"};
     Boolean[] cc = {true,false,false,true,true};
     String[] grades = {"90,80,95,90,100", "95,100,100,90,90","85,85,95,100,90","90,100,95,85,90","80,80,65,55,90"};
-    for (int i = 0; i < ID.length;i++){
-      System.out.println(id[i]  + ": " + name[i] + " has grades of " + grades[i]);
-      if (cc[i]){
-        System.out.println("Was a close contact!");
-      }
-      else{
-        System.out.println("Was not a close contact!");
-      }
 
-    /*  plan: 4 different arrays with each index connecting
-      Ex:Jimmy Smith is index 1 in array 2, with ID is index 1 in array 1, etc. */
+      int[] grades1 = {90,80,95,90,100};
+      Student student1 = new Student("1234567","Jimmy Smith", true, grades1);
+      Student student2 = new Student("98764543","Maria Hernandez",false, new int[] {95,100,100,90,90});
+      System.out.println(student1.getName() + "'s average is: " + student1.getAverage());
+
+      if (student1.getCloseContact()){
+        System.out.println("Please report to the auditorium for your take-home covid test.");
+      }
+      else {
+        System.out.println("You are not a close contact, keep masking! Get boosted.");
+      }
+      System.out.println(student2.getName() + "'s average is: " + student2.getAverage());
 
 
   }
