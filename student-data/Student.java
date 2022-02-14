@@ -33,7 +33,7 @@ public class Student {
 
   //set the value of close contact
   public void setCloseContact(boolean value) {
-
+    closeContact = value;
   }
 
   //get the String value of the object
@@ -50,5 +50,5 @@ public class Student {
     }
     return false;
   }
-  
+
 }
