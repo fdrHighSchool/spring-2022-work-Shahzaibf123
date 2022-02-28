@@ -19,7 +19,9 @@ public class Metrocard {
     this.moneyleft = moneyleft;
     this.Currenttime = Currenttime;
   }
-
+  public String toString(){
+    return "This metrocard has the id number of " + this.id + " with approximately " + (double)(this.moneyleft/100) + " dollars left.";
+  }
   public String doubleuse(){
     return "Can not be swiped within 20-minute windows";
   }
