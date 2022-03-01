@@ -1,53 +1,62 @@
 public class Metrocard {
   private String id;
-  private int moneyleft;
+  private int numrides;
   private int Currenttime;
 
   public Metrocard(String id){
     this.id = id;
-    this.moneyleft = 0;
+    this.numrides = 0;
     this.Currenttime = 900;
   }
 
-  public Metrocard(String id, int moneyleft){
+  public Metrocard(String id, int numrides){
     this.id = id;
-    this.moneyleft = moneyleft;
+    this.numrides = numrides;
     this.Currenttime = 900;
   }
-  public Metrocard(String id, int moneyleft, int Currenttime){
+
+  public Metrocard(String id, int numrides, int Currenttime){
     this.id = id;
-    this.moneyleft = moneyleft;
+    this.numrides = numrides;
     this.Currenttime = Currenttime;
   }
+
   public String toString(){
-    return "This metrocard has the id number of " + this.id + " with approximately " + (double)(this.moneyleft/100) + " dollars left.";
+    return "This metrocard has the id number of " + this.id + " with approximately " + numrides + " rides left.";
   }
-  public String doubleuse(){
-    return "Can not be swiped within 20-minute windows";
-  }
+
   public boolean Canuse(){ //timeoriented
-    if (Currenttime > 530 && Currenttime < 2030){
+    if (this.Currenttime > 530 && this.Currenttime < 2030){
       return true;
     }
     else {
       return false;
     }
   }
+
   public int Adduse(){
-    return this.moneyleft + 275;
+    return this.numrides++;
   }
 
-  public int useuse(){
+  public void useuse(int time){
     if (Canuse()){
-    return this.moneyleft - 275;
+      if (this.numrides > 0 && time - this.Currenttime > 15){
+        System.out.println("Have a good ride!");
+        this.numrides = this.numrides - 1;
+        this.Currenttime = time;
+      }
     }
     else {
-      return this.moneyleft;//nothing happens, card wasnt used
+      System.out.println("ERROR: Card can not be used.");//nothing happens, card wasnt used
     }
   }
 
-  public boolean Enoughuses(){//money-oriented
-    if (moneyleft < 275){
+public void refresh(){
+  this.numrides = 3;
+}
+
+  public boolean Enoughuses(){//rides-oriented
+    if (numrides > 0){
       return false;
     }
     else{
