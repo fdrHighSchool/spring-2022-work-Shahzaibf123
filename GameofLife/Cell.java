@@ -4,12 +4,12 @@ public class Cell{
   private int DoA;
   private String[][] board;
 
-  public Cell( String[][] board){
-    this.DoA = 0;
+  public Cell(int DoA){
+    this.DoA = DoA;
     this.board = board;
 
   }
-
+  
   public int getStatus(){
     return DoA;
   }
