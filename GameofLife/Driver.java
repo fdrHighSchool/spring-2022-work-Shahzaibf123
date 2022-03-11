@@ -4,18 +4,28 @@ public class Driver{//start of class Driver
 
     int generation = 1;
     String[][] board = createBoard();
-    Cell cell1 = new Cell(4,5);
-    board[cell1.getX()][cell1.getY()] = "X";
+    board = setBoard(board);
     displayBoard(board);
 
   }//end of main
-  
+
+
+
+
+  public static String[][] setBoard(String [][] board){
+    for (int row = 0; row < 10; row++){
+      for (int col = 0; col < 10; col++){
+        board[row][col] = (Math.random() > .5) ? "X" : "";
+      }
+    }
+    return board;
+  }
 
   public static String[][] createBoard(){ //createBoard function started
     String[][] board = new String[10][10];
     for (int row = 0; row < 10; row++){
       for (int col = 0; col < 10; col++){
-        board[row][col] = "[]";
+        board[row][col] = "";
       }
     }
     return board;

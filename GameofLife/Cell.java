@@ -1,26 +1,23 @@
 import java.util.*;
 public class Cell{
-  private int x;
-  private int y;
+
   private int DoA;
-  public Cell(int x, int y){
-    this.x = x;
-    this.y = y;
-    DoA = 0;
+  private String[][] board;
+
+  public Cell( String[][] board){
+    this.DoA = 0;
+    this.board = board;
+
   }
 
-  public int status(){
-    double random = Math.random()
-    this.DoA = (random > .5) ? 1 : 0;
-    // if the statement in () is true the first is returned else the second is returned
+  public int getStatus(){
     return DoA;
   }
 
-  public int getX(){
-    return this.x;
-  }
-  public int getY(){
-    return this.y;
+
+  public int Neighbors(int x, int y){
+    count = 0;
+    if ()
   }
 
 
