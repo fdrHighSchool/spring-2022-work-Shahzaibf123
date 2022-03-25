@@ -29,6 +29,23 @@ public class Deck {
     }
     this.deck = shuffledDeck();
 
+
+    ArrayList<Card> sub1 = new ArrayList<Card>();
+    ArrayList<Card> sub2 = new ArrayList<Card>();
+    for (int i = 0; i < this.deck.size() / 2; i++){
+      sub1.add(this.deck.get(i));
+      sub2.add(this.deck.get(i + 26)));
+    }
+
+  }
+  public void Deal(){
+    ArrayList<Card> p1Cards = new ArrayList<Card();
+    ArrayList<Card> p2Cards = new ArrayList<Card();
+
+      while(this.deck.size > 0){
+        p1Cards.add(this.deck.size.remove());
+        p2Cards.add(this.deck.size.remove());
+      }
   }
 
   public void displayDeck() {
@@ -36,5 +53,11 @@ public class Deck {
       System.out.println(c);
     }
   }
+
+
+
+
+
+
 
 } // end class
